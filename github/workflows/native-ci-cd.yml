@@ -1,0 +1,83 @@
+name: Testing CI-CD
+
+on:
+  push:
+    branches:
+      - dev
+      - staging
+      - main
+
+env:
+  # Dev environment variables
+  DEV_BUILD_SCRIPT: npm run dev-build-android
+  DEV_APK_PATH: android/app/build/outputs/apk/dev/release/app-dev-release.apk
+  DEV_ARTIFACT_NAME: app-dev-release.apk
+  DEV_ENV_FILE: .env.dev
+
+  # Staging environment variables
+  STAGING_BUILD_SCRIPT: npm run stage-build-android
+  STAGING_APK_PATH: android/app/build/outputs/apk/stage/release/app-stage-release.apk
+  STAGING_ARTIFACT_NAME: app-stage-release.apk
+  STAGING_ENV_FILE: .env.stage
+
+  # Production environment variables
+  PROD_BUILD_SCRIPT: npm run live-build-android
+  PROD_APK_PATH: android/app/build/outputs/apk/live/release/app-live-release.apk
+  PROD_ARTIFACT_NAME: app-live-release.apk
+  PROD_ENV_FILE: .env.live
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set environment variables
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "${{ vars.LIVE_ENV }}" > ${{ env.PROD_ENV_FILE }}
+            echo "BUILD_SCRIPT=${{ env.PROD_BUILD_SCRIPT }}" >> $GITHUB_ENV
+            echo "APK_PATH=${{ env.PROD_APK_PATH }}" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ env.PROD_ARTIFACT_NAME }}" >> $GITHUB_ENV
+          elif [ "${{ github.ref }}" = "refs/heads/staging" ]; then
+            echo "${{ vars.STAGING_ENV }}" > ${{ env.STAGING_ENV_FILE }}
+            echo "BUILD_SCRIPT=${{ env.STAGING_BUILD_SCRIPT }}" >> $GITHUB_ENV
+            echo "APK_PATH=${{ env.STAGING_APK_PATH }}" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ env.STAGING_ARTIFACT_NAME }}" >> $GITHUB_ENV
+          elif [ "${{ github.ref }}" = "refs/heads/dev" ]; then
+            echo "${{ vars.DEV_ENV }}" > ${{ env.DEV_ENV_FILE }}
+            echo "BUILD_SCRIPT=${{ env.DEV_BUILD_SCRIPT }}" >> $GITHUB_ENV
+            echo "APK_PATH=${{ env.DEV_APK_PATH }}" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ env.DEV_ARTIFACT_NAME }}" >> $GITHUB_ENV
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Make gradlew executable
+        run: chmod +x android/gradlew
+
+      - name: Build APK
+        run: ${{ env.BUILD_SCRIPT }}
+          
+      - name: Upload APK as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.APK_PATH }}

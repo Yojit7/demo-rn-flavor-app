@@ -1,7 +1,12 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
-
+project.ext.envConfigFiles = [
+    dev: ".env.dev",
+    stage: ".env.stage",
+    live: ".env.live",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -78,6 +83,7 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.reactflavors"
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.reactflavors"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -85,6 +91,38 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+            productFlavors {
+        dev {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.reactflavors.dev"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.reactflavors"
+            versionCode 1
+            versionName "1.0"
+    }
+        stage {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.reactflavors.stage"       
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.reactflavors"
+            versionCode 1
+            versionName "1.0"
+    }
+        live {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.reactflavors.live"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.reactflavors"
+            versionCode 1
+            versionName "1.0"
+    }
+}
+
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
