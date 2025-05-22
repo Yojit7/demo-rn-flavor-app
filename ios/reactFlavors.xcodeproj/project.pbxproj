@@ -7,33 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C80B921A6F3F58F76C31292 /* libPods-reactFlavors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-reactFlavors.a */; };
+		0C80B921A6F3F58F76C31292 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1E694DB2F9635E86F208C1AC /* libPods-reactFlavors-reactFlavors-Stage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA18F28087B692DEB6EE99C /* libPods-reactFlavors-reactFlavors-Stage.a */; };
+		34931FE6680BB86159E25726 /* libPods-reactFlavors-reactFlavors-Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B026CC24BF52760FF77926 /* libPods-reactFlavors-reactFlavors-Dev.a */; };
+		5768505C3DA77BFE0A8220D0 /* libPods-reactFlavors-reactFlavors-Live.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC30798396D9810865FABADC /* libPods-reactFlavors-reactFlavors-Live.a */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C8D725892DDE071400E88E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		C8D7258D2DDE071400E88E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C8D7258E2DDE071400E88E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		C8D7258F2DDE071400E88E39 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		C8D7259B2DDE072C00E88E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		C8D7259F2DDE072C00E88E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C8D725A02DDE072C00E88E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		C8D725A12DDE072C00E88E39 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		C8D725AD2DDE073500E88E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		C8D725B12DDE073500E88E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C8D725B22DDE073500E88E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		C8D725B32DDE073500E88E39 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		E19ECE4DFC68D4F882146492 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		F467E53FF69D8A61A3A0D515 /* libPods-reactFlavors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14472F771AFAE73CE69D9CFA /* libPods-reactFlavors.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = reactFlavors;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0973BF68A86321A2DACDE672 /* Pods-reactFlavors-reactFlavors-Stage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors-reactFlavors-Stage.release.xcconfig"; path = "Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reactFlavors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactFlavors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reactFlavors/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactFlavors/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = reactFlavors/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		14472F771AFAE73CE69D9CFA /* libPods-reactFlavors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactFlavors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA18F28087B692DEB6EE99C /* libPods-reactFlavors-reactFlavors-Stage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactFlavors-reactFlavors-Stage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-reactFlavors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors.debug.xcconfig"; path = "Target Support Files/Pods-reactFlavors/Pods-reactFlavors.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-reactFlavors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors.release.xcconfig"; path = "Target Support Files/Pods-reactFlavors/Pods-reactFlavors.release.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-reactFlavors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactFlavors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5891D96D683FDA5EFD9B441F /* Pods-reactFlavors-reactFlavors-Stage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors-reactFlavors-Stage.debug.xcconfig"; path = "Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage.debug.xcconfig"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = reactFlavors/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactFlavors/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D81F385C2F7921ECF569313 /* Pods-reactFlavors-reactFlavors-Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors-reactFlavors-Live.release.xcconfig"; path = "Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live.release.xcconfig"; sourceTree = "<group>"; };
+		A9B026CC24BF52760FF77926 /* libPods-reactFlavors-reactFlavors-Dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactFlavors-reactFlavors-Dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC30798396D9810865FABADC /* libPods-reactFlavors-reactFlavors-Live.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactFlavors-reactFlavors-Live.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE641C75873883699F042598 /* Pods-reactFlavors-reactFlavors-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors-reactFlavors-Dev.release.xcconfig"; path = "Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev.release.xcconfig"; sourceTree = "<group>"; };
+		BEEC655A0EEA32031316C42C /* Pods-reactFlavors-reactFlavors-Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors-reactFlavors-Live.debug.xcconfig"; path = "Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live.debug.xcconfig"; sourceTree = "<group>"; };
+		C8D725962DDE071400E88E39 /* reactFlavors-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactFlavors-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D725972DDE071500E88E39 /* reactFlavors-Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "reactFlavors-Dev-Info.plist"; path = "/Users/yojit/Desktop/reactFlavors/ios/reactFlavors-Dev-Info.plist"; sourceTree = "<absolute>"; };
+		C8D725A82DDE072C00E88E39 /* reactFlavors-Stage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactFlavors-Stage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D725A92DDE072C00E88E39 /* reactFlavors-Stage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "reactFlavors-Stage-Info.plist"; path = "/Users/yojit/Desktop/reactFlavors/ios/reactFlavors-Stage-Info.plist"; sourceTree = "<absolute>"; };
+		C8D725BA2DDE073500E88E39 /* reactFlavors-Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactFlavors-Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D725BB2DDE073500E88E39 /* reactFlavors-Live-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "reactFlavors-Live-Info.plist"; path = "/Users/yojit/Desktop/reactFlavors/ios/reactFlavors-Live-Info.plist"; sourceTree = "<absolute>"; };
+		DEE9F8E4AFF0FDE32D798A98 /* Pods-reactFlavors-reactFlavors-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactFlavors-reactFlavors-Dev.debug.xcconfig"; path = "Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -42,21 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-reactFlavors.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* BuildFile in Frameworks */,
+				F467E53FF69D8A61A3A0D515 /* libPods-reactFlavors.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D7258A2DDE071400E88E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34931FE6680BB86159E25726 /* libPods-reactFlavors-reactFlavors-Dev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D7259C2DDE072C00E88E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E694DB2F9635E86F208C1AC /* libPods-reactFlavors-reactFlavors-Stage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D725AE2DDE073500E88E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5768505C3DA77BFE0A8220D0 /* libPods-reactFlavors-reactFlavors-Live.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* reactFlavors */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-reactFlavors.a */,
+				A9B026CC24BF52760FF77926 /* libPods-reactFlavors-reactFlavors-Dev.a */,
+				AC30798396D9810865FABADC /* libPods-reactFlavors-reactFlavors-Live.a */,
+				2CA18F28087B692DEB6EE99C /* libPods-reactFlavors-reactFlavors-Stage.a */,
+				14472F771AFAE73CE69D9CFA /* libPods-reactFlavors.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,6 +134,9 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				C8D725972DDE071500E88E39 /* reactFlavors-Dev-Info.plist */,
+				C8D725A92DDE072C00E88E39 /* reactFlavors-Stage-Info.plist */,
+				C8D725BB2DDE073500E88E39 /* reactFlavors-Live-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -103,6 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* reactFlavors.app */,
+				C8D725962DDE071400E88E39 /* reactFlavors-Dev.app */,
+				C8D725A82DDE072C00E88E39 /* reactFlavors-Stage.app */,
+				C8D725BA2DDE073500E88E39 /* reactFlavors-Live.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +159,12 @@
 			children = (
 				3B4392A12AC88292D35C810B /* Pods-reactFlavors.debug.xcconfig */,
 				5709B34CF0A7D63546082F79 /* Pods-reactFlavors.release.xcconfig */,
+				DEE9F8E4AFF0FDE32D798A98 /* Pods-reactFlavors-reactFlavors-Dev.debug.xcconfig */,
+				BE641C75873883699F042598 /* Pods-reactFlavors-reactFlavors-Dev.release.xcconfig */,
+				BEEC655A0EEA32031316C42C /* Pods-reactFlavors-reactFlavors-Live.debug.xcconfig */,
+				9D81F385C2F7921ECF569313 /* Pods-reactFlavors-reactFlavors-Live.release.xcconfig */,
+				5891D96D683FDA5EFD9B441F /* Pods-reactFlavors-reactFlavors-Stage.debug.xcconfig */,
+				0973BF68A86321A2DACDE672 /* Pods-reactFlavors-reactFlavors-Stage.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -138,6 +191,69 @@
 			name = reactFlavors;
 			productName = reactFlavors;
 			productReference = 13B07F961A680F5B00A75B9A /* reactFlavors.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8D725862DDE071400E88E39 /* reactFlavors-Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D725932DDE071400E88E39 /* Build configuration list for PBXNativeTarget "reactFlavors-Dev" */;
+			buildPhases = (
+				C8D725872DDE071400E88E39 /* [CP] Check Pods Manifest.lock */,
+				C8D725882DDE071400E88E39 /* Sources */,
+				C8D7258A2DDE071400E88E39 /* Frameworks */,
+				C8D7258C2DDE071400E88E39 /* Resources */,
+				C8D725902DDE071400E88E39 /* Bundle React Native code and images */,
+				C8D725912DDE071400E88E39 /* [CP] Embed Pods Frameworks */,
+				C8D725922DDE071400E88E39 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "reactFlavors-Dev";
+			productName = reactFlavors;
+			productReference = C8D725962DDE071400E88E39 /* reactFlavors-Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8D725982DDE072C00E88E39 /* reactFlavors-Stage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D725A52DDE072C00E88E39 /* Build configuration list for PBXNativeTarget "reactFlavors-Stage" */;
+			buildPhases = (
+				C8D725992DDE072C00E88E39 /* [CP] Check Pods Manifest.lock */,
+				C8D7259A2DDE072C00E88E39 /* Sources */,
+				C8D7259C2DDE072C00E88E39 /* Frameworks */,
+				C8D7259E2DDE072C00E88E39 /* Resources */,
+				C8D725A22DDE072C00E88E39 /* Bundle React Native code and images */,
+				C8D725A32DDE072C00E88E39 /* [CP] Embed Pods Frameworks */,
+				C8D725A42DDE072C00E88E39 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "reactFlavors-Stage";
+			productName = reactFlavors;
+			productReference = C8D725A82DDE072C00E88E39 /* reactFlavors-Stage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8D725AA2DDE073500E88E39 /* reactFlavors-Live */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D725B72DDE073500E88E39 /* Build configuration list for PBXNativeTarget "reactFlavors-Live" */;
+			buildPhases = (
+				C8D725AB2DDE073500E88E39 /* [CP] Check Pods Manifest.lock */,
+				C8D725AC2DDE073500E88E39 /* Sources */,
+				C8D725AE2DDE073500E88E39 /* Frameworks */,
+				C8D725B02DDE073500E88E39 /* Resources */,
+				C8D725B42DDE073500E88E39 /* Bundle React Native code and images */,
+				C8D725B52DDE073500E88E39 /* [CP] Embed Pods Frameworks */,
+				C8D725B62DDE073500E88E39 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "reactFlavors-Live";
+			productName = reactFlavors;
+			productReference = C8D725BA2DDE073500E88E39 /* reactFlavors-Live.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,24 +283,51 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* reactFlavors */,
+				C8D725862DDE071400E88E39 /* reactFlavors-Dev */,
+				C8D725982DDE072C00E88E39 /* reactFlavors-Stage */,
+				C8D725AA2DDE073500E88E39 /* reactFlavors-Live */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E19ECE4DFC68D4F882146492 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D7258C2DDE071400E88E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D7258D2DDE071400E88E39 /* LaunchScreen.storyboard in Resources */,
+				C8D7258E2DDE071400E88E39 /* Images.xcassets in Resources */,
+				C8D7258F2DDE071400E88E39 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D7259E2DDE072C00E88E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D7259F2DDE072C00E88E39 /* LaunchScreen.storyboard in Resources */,
+				C8D725A02DDE072C00E88E39 /* Images.xcassets in Resources */,
+				C8D725A12DDE072C00E88E39 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D725B02DDE073500E88E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D725B12DDE073500E88E39 /* LaunchScreen.storyboard in Resources */,
+				C8D725B22DDE073500E88E39 /* Images.xcassets in Resources */,
+				C8D725B32DDE073500E88E39 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +389,222 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C8D725872DDE071400E88E39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reactFlavors-reactFlavors-Dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725902DDE071400E88E39 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		C8D725912DDE071400E88E39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725922DDE071400E88E39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Dev/Pods-reactFlavors-reactFlavors-Dev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725992DDE072C00E88E39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reactFlavors-reactFlavors-Stage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725A22DDE072C00E88E39 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		C8D725A32DDE072C00E88E39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725A42DDE072C00E88E39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Stage/Pods-reactFlavors-reactFlavors-Stage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725AB2DDE073500E88E39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reactFlavors-reactFlavors-Live-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725B42DDE073500E88E39 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		C8D725B52DDE073500E88E39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D725B62DDE073500E88E39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactFlavors-reactFlavors-Live/Pods-reactFlavors-reactFlavors-Live-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,15 +633,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* reactFlavors */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		C8D725882DDE071400E88E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D725892DDE071400E88E39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXTargetDependency section */
+		C8D7259A2DDE072C00E88E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D7259B2DDE072C00E88E39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D725AC2DDE073500E88E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D725AD2DDE073500E88E39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -408,7 +783,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -473,8 +855,176 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8D725942DDE071400E88E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEE9F8E4AFF0FDE32D798A98 /* Pods-reactFlavors-reactFlavors-Dev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "reactFlavors-Dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C8D725952DDE071400E88E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE641C75873883699F042598 /* Pods-reactFlavors-reactFlavors-Dev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "reactFlavors-Dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		C8D725A62DDE072C00E88E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5891D96D683FDA5EFD9B441F /* Pods-reactFlavors-reactFlavors-Stage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stage";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "reactFlavors-Stage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C8D725A72DDE072C00E88E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0973BF68A86321A2DACDE672 /* Pods-reactFlavors-reactFlavors-Stage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Stage";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "reactFlavors-Stage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		C8D725B82DDE073500E88E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEEC655A0EEA32031316C42C /* Pods-reactFlavors-reactFlavors-Live.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Live";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "reactFlavors-Live-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C8D725B92DDE073500E88E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D81F385C2F7921ECF569313 /* Pods-reactFlavors-reactFlavors-Live.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Live";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "reactFlavors-Live-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -495,6 +1045,33 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D725932DDE071400E88E39 /* Build configuration list for PBXNativeTarget "reactFlavors-Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D725942DDE071400E88E39 /* Debug */,
+				C8D725952DDE071400E88E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D725A52DDE072C00E88E39 /* Build configuration list for PBXNativeTarget "reactFlavors-Stage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D725A62DDE072C00E88E39 /* Debug */,
+				C8D725A72DDE072C00E88E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D725B72DDE073500E88E39 /* Build configuration list for PBXNativeTarget "reactFlavors-Live" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D725B82DDE073500E88E39 /* Debug */,
+				C8D725B92DDE073500E88E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
