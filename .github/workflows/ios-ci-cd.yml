@@ -10,19 +10,19 @@ on:
 env:
   # Dev environment variables
   DEV_BUILD_SCRIPT: npm run dev-build-ios
-  DEV_APP_PATH: ios/build/Build/Products/Debug-iphonesimulator/reactFlavors-Dev.app
+  DEV_APP_PATH: android/app/build/outputs/apk/dev/release/reactFlavors-Dev.app
   DEV_ARTIFACT_NAME: reactFlavors-Dev.app
   DEV_ENV_FILE: .env.dev
 
   # Staging environment variables
   STAGING_BUILD_SCRIPT: npm run stage-build-ios
-  STAGING_APP_PATH: ios/build/Build/Products/Debug-iphonesimulator/reactFlavors-Stage.app
+  STAGING_APP_PATH: android/app/build/outputs/apk/dev/release/reactFlavors-Stage.app
   STAGING_ARTIFACT_NAME: reactFlavors-Stage.app
   STAGING_ENV_FILE: .env.stage
 
   # Production environment variables
   PROD_BUILD_SCRIPT: npm run live-build-ios
-  PROD_APP_PATH: ios/build/Build/Products/Debug-iphonesimulator/reactFlavors-Live.app
+  PROD_APP_PATH: android/app/build/outputs/apk/dev/release/reactFlavors-Live.app
   PROD_ARTIFACT_NAME: reactFlavors-Live.app
   PROD_ENV_FILE: .env.live
 
