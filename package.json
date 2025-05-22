@@ -9,9 +9,11 @@
     "start": "react-native start",
     "test": "jest",
     "android-prod-release-aab": "cd android && ./gradlew clean bundleLiveRelease",
+    "root-android":"react-native run-android --mode=rootDebug",
     "dev-android":"react-native run-android --mode=devDebug",
     "live-android":"react-native run-android --mode=liveDebug",
     "stage-android":"react-native run-android --mode=stageDebug",
+    "root-build-android":"cd android && ./gradlew assembleRootRelease",
     "dev-build-android":"cd android && ./gradlew assembleDevRelease",
     "live-build-android":"cd android && ./gradlew assembleLiveRelease",
     "stage-build-android":"cd android && ./gradlew assembleStageRelease"

@@ -2,6 +2,7 @@ apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 project.ext.envConfigFiles = [
+    root:".env",
     dev: ".env.dev",
     stage: ".env.stage",
     live: ".env.live",
@@ -92,7 +93,16 @@ android {
         versionName "1.0"
     }
 
-            productFlavors {
+    productFlavors {
+        root {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.testing_33"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.testing_33"
+            versionCode 1
+            versionName "1.0"
+    }
         dev {
             dimension "default"
             minSdkVersion rootProject.ext.minSdkVersion
