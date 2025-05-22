@@ -16,7 +16,15 @@
     "root-build-android":"cd android && ./gradlew assembleRootRelease",
     "dev-build-android":"cd android && ./gradlew assembleDevRelease",
     "live-build-android":"cd android && ./gradlew assembleLiveRelease",
-    "stage-build-android":"cd android && ./gradlew assembleStageRelease"
+    "stage-build-android":"cd android && ./gradlew assembleStageRelease",
+    "root-ios":"react-native run-ios --scheme reactFlavors",
+    "dev-ios":"react-native run-ios --scheme reactFlavors-Dev",
+    "live-ios":"react-native run-ios --scheme reactFlavors-Live",
+    "stage-ios":"react-native run-ios --scheme reactFlavors-Stage",
+    "root-build-ios": "xcodebuild -workspace ios/reactFlavors.xcworkspace -scheme reactFlavors -sdk iphonesimulator -configuration Release -derivedDataPath ios/build",
+    "dev-build-ios": "xcodebuild -workspace ios/reactFlavors.xcworkspace -scheme reactFlavors-Dev -sdk iphonesimulator -configuration Release -derivedDataPath ios/build",
+    "live-build-ios": "xcodebuild -workspace ios/reactFlavors.xcworkspace -scheme reactFlavors-Live -sdk iphonesimulator -configuration Release -derivedDataPath ios/build",
+    "stage-build-ios": "xcodebuild -workspace ios/reactFlavors.xcworkspace -scheme reactFlavors-Stage -sdk iphonesimulator -configuration Release -derivedDataPath ios/build"
   },
   "dependencies": {
     "react": "19.0.0",
