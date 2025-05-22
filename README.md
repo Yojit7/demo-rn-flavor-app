@@ -1,97 +1,252 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Multi-Flavor Android and iOS App
 
-# Getting Started
+This project supports multiple environments (**dev**, **stage**, **live**, and **root**) via product flavors, environment-specific `.env` files, and CI/CD automation using GitHub Actions.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Setup Instructions
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 📱 Android Setup
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 1. **Clone the repository**
 
 ```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
+### 2. **Install dependencies**
 
 ```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+yarn install
+# or
+npm install
 ```
 
-### iOS
+### 3. **Configure Environment Variables**
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+The project uses [`react-native-config`](https://github.com/luggit/react-native-config) to manage environment variables for different flavors.
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+#### Create these files in your project root:
+
+* `.env` (for root flavor)
+* `.env.dev` (for dev flavor)
+* `.env.stage` (for stage flavor)
+* `.env.live` (for live flavor)
+
+Each file contains environment-specific variables, e.g.:
+
+```
+API_URL=https://api.dev.example.com
+APP_NAME=ReactFlavorsDev
+```
+
+### 4. **Gradle Setup for Flavors**
+
+#### In your `android/app/build.gradle` file:
+
+```groovy
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+project.ext.envConfigFiles = [
+    root: ".env",
+    dev: ".env.dev",
+    stage: ".env.stage",
+    live: ".env.live",
+]
+
+flavorDimensions "default"
+
+productFlavors {
+    root {
+        dimension "default"
+        applicationId "com.testing_33"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        resValue "string", "build_config_package", "com.testing_33"
+        versionCode 1
+        versionName "1.0"
+    }
+    dev {
+        dimension "default"
+        applicationId "com.reactflavors.dev"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        resValue "string", "build_config_package", "com.reactflavors"
+        versionCode 1
+        versionName "1.0"
+    }
+    stage {
+        dimension "default"
+        applicationId "com.reactflavors.stage"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        resValue "string", "build_config_package", "com.reactflavors"
+        versionCode 1
+        versionName "1.0"
+    }
+    live {
+        dimension "default"
+        applicationId "com.reactflavors.live"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        resValue "string", "build_config_package", "com.reactflavors"
+        versionCode 1
+        versionName "1.0"
+    }
+}
+```
+
+### 5. **Change App Name & Icon per Flavor**
+
+1. Duplicate the `android/app/src/main` folder to:
+
+   * `src/dev`
+   * `src/stage`
+   * `src/live`
+2. In each flavor folder, update:
+
+   * **App icon:** Replace icon assets (in `res/`) with flavor-specific icons.
+   * **App name:** Edit `res/values/strings.xml` to set the name for each flavor.
+
+**Release Builds:**
 
 ```sh
+# Root
+npm run root-build-android
+
+# Dev
+npm run dev-build-android
+
+# Stage
+npm run stage-build-android
+
+# Live
+npm run live-build-android
+```
+
+**Generate AAB for Play Store (Live flavor):**
+
+```sh
+npm run android-prod-release-aab
+```
+
+---
+
+## 🍏 iOS Setup
+
+### 1. Open Xcode
+
+### 2. Create Targets
+
+* Create different targets named `MyApp-DEV`, `MyApp-Stage`, and `MyApp-Live`.
+* Rename each new target's Info.plist accordingly (e.g., `reactFlavors-Dev-Info.plist`).
+
+### 3. Configure Info.plist
+
+* Select each target.
+* Go to **Build Settings** and search `info.plist.file`.
+* Ensure each target points to the correct flavor-specific Info.plist file.
+
+### 4. Manage Schemes
+
+* Select **Product > Scheme > Manage Schemes**.
+* Create schemes matching each flavor.
+* For each scheme, select **Product > Scheme > Edit Scheme**.
+* In the **Build > Pre-actions** tab, add a new run script action with:
+
+```sh
+echo ".env.dev" > /tmp/envfile
+# Repeat for each flavor accordingly
+echo ".env.stage" > /tmp/envfile
+```
+
+### 5. Update Podfile
+
+In `ios/Podfile`:
+
+```ruby
+target 'MyApp-Dev' do
+  inherit! :complete
+end
+
+target 'MyApp-Stage' do
+  inherit! :complete
+end
+
+target 'MyApp-Live' do
+  inherit! :complete
+end
+```
+
+### 6. Install Pods
+
+```sh
+gem install bundler
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
 bundle exec pod install
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### 7. Update App Name
+
+* Select each target and go to **General > Info**.
+* Change **Bundle Display Name** according to each flavor.
+
+### 8. Update App Icon
+
+* In Xcode, navigate to your workspace/project assets.
+* Add new image assets for each flavor.
+* Rename asset files according to each flavor.
+* For each target, go to **General > App Icon and Launch Screen** and select the appropriate icon asset.
+
+### 9. Running & Building for Each Flavor (iOS)
+
+**Run in Simulator:**
 
 ```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm run dev-ios
+npm run stage-ios
+npm run live-ios
+npm run root-ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+**Generate unsigned .app build:**
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```sh
+npm run dev-build-ios
+npm run stage-build-ios
+npm run live-build-ios
+npm run root-build-ios
+```
 
-## Step 3: Modify your app
+**Install .app file on Simulator:**
 
-Now that you have successfully run the app, let's make changes!
+```sh
+xcrun simctl install booted /path/to/MyApp.app
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## ⚙️ CI/CD with GitHub Actions
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+* CI/CD is configured via workflow files in `.github/workflows/`.
+* On every push to `dev-flight`, `staging-flight`, or `main` branches:
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+  * The appropriate flavor build is triggered.
+  * APK files are generated and uploaded as artifacts for download.
+* Environment-specific `.env` files are automatically injected in the build process.
 
-## Congratulations! :tada:
+### **Download Build Artifacts**
 
-You've successfully run and modified your React Native App. :partying_face:
+1. Go to your repo’s **Actions** tab on GitHub.
+2. Select the relevant workflow run.
+3. Download the APK file from the workflow’s artifacts section.
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 🛠️ Additional Notes
 
-# Troubleshooting
+* Make sure `gradlew`, `gradlew.bat`, and all files under `android/gradle/wrapper/` are **committed** to your repo for builds to succeed in CI/CD.
+* Do **not** commit the `.gradle/` or `android/build/` directories.
+* Keep your environment variables **secure**; don’t commit sensitive values.
+* Ensure you include the script action; otherwise, the project will default to using the .env file across all flavors.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
