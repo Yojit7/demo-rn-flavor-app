@@ -1,0 +1,82 @@
+name: IOS CI-CD
+
+on:
+  push:
+    branches:
+      - dev-flight
+      - staging-flight
+      - main
+
+env:
+  # Dev environment variables
+  DEV_BUILD_SCRIPT: npm run dev-build-ios
+  DEV_APP_PATH: ios/build/Build/Products/Debug-iphonesimulator/reactFlavors-Dev.app
+  DEV_ARTIFACT_NAME: reactFlavors-Dev.app
+  DEV_ENV_FILE: .env.dev
+
+  # Staging environment variables
+  STAGING_BUILD_SCRIPT: npm run stage-build-ios
+  STAGING_APP_PATH: ios/build/Build/Products/Debug-iphonesimulator/reactFlavors-Stage.app
+  STAGING_ARTIFACT_NAME: reactFlavors-Stage.app
+  STAGING_ENV_FILE: .env.stage
+
+  # Production environment variables
+  PROD_BUILD_SCRIPT: npm run live-build-ios
+  PROD_APP_PATH: ios/build/Build/Products/Debug-iphonesimulator/reactFlavors-Live.app
+  PROD_ARTIFACT_NAME: reactFlavors-Live.app
+  PROD_ENV_FILE: .env.live
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set environment variables
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "${{ vars.LIVE_ENV }}" > ${{ env.PROD_ENV_FILE }}
+            echo "BUILD_SCRIPT=${{ env.PROD_BUILD_SCRIPT }}" >> $GITHUB_ENV
+            echo "APK_PATH=${{ env.PROD_APP_PATH }}" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ env.PROD_ARTIFACT_NAME }}" >> $GITHUB_ENV
+          elif [ "${{ github.ref }}" = "refs/heads/staging-flight" ]; then
+            echo "${{ vars.STAGING_ENV }}" > ${{ env.STAGING_ENV_FILE }}
+            echo "BUILD_SCRIPT=${{ env.STAGING_BUILD_SCRIPT }}" >> $GITHUB_ENV
+            echo "APK_PATH=${{ env.STAGING_APP_PATH }}" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ env.STAGING_ARTIFACT_NAME }}" >> $GITHUB_ENV
+          elif [ "${{ github.ref }}" = "refs/heads/dev-flight" ]; then
+            echo "${{ vars.DEV_ENV }}" > ${{ env.DEV_ENV_FILE }}
+            echo "BUILD_SCRIPT=${{ env.DEV_BUILD_SCRIPT }}" >> $GITHUB_ENV
+            echo "APK_PATH=${{ env.DEV_APP_PATH }}" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ env.DEV_ARTIFACT_NAME }}" >> $GITHUB_ENV
+          fi        
+        
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          yarn install
+          cd ios
+          gem install bundler -v 2.4.22
+          bundle install
+          bundle exec pod install
+          cd ..
+
+      - name: Build iOS simulator app
+        run: ${{ env.BUILD_SCRIPT }}
+
+      - name: Upload iOS app as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.APK_PATH }}
+
+
+
+        
