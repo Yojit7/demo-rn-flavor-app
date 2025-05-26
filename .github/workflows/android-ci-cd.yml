@@ -64,7 +64,7 @@ jobs:
       - name: Decode dev keystore
         if: always()
         run: |
-          echo "${{ secrets.DEV_KEYSTORE_BASE64 }}" \
+          echo "${{ env.DEV_KEYSTORE_BASE64 }}" \
             | base64 -d > android/app/my-upload-key.keystore
 
       - name: Set up Java
