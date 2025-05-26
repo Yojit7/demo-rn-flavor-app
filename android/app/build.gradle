@@ -146,7 +146,7 @@ android {
             storePassword project.env.get("MYAPP_UPLOAD_KEYSTORE_PASSWORD")
             keyAlias      project.env.get("MYAPP_UPLOAD_KEY_ALIAS")
             keyPassword   project.env.get("MYAPP_UPLOAD_KEY_PASSWORD")
-            
+            storeType 'pkcs12'     
         }
     }
     buildTypes {
